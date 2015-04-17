@@ -12,7 +12,7 @@ docker pull raffaeleguidi/oracle-xe-11g
 
 Run with 22, 8080 and 1521 ports opened:
 ```
-docker run -d -p 40022:22 -p 41521:1521 -p 48080:8080 raffaeleguidi/docker-oracle-xe-11g --name oracle-base:v1
+docker run --name oracle-base -d -p 40022:22 -p 41521:1521 -p 48080:8080 raffaeleguidi/docker-oracle-xe-11g:v1
 ```
 
 Connect database with following setting:
