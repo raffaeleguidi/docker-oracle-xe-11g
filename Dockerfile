@@ -1,6 +1,6 @@
 FROM ubuntu:14.04.1
 
-MAINTAINER Wei-Ming Wu <wnameless@gmail.com>
+MAINTAINER Raffaele P. Guidi <raffaele.p.guidi@gmail.com>
 
 ADD chkconfig /sbin/chkconfig
 ADD init.ora /
