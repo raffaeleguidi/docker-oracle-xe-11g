@@ -1,7 +1,8 @@
 FROM ubuntu:14.04.1
-ENV http_proxy $http_proxy
-ENV https_proxy $HTTPS_PROXY
-ENV HTTPS_PROXY $HTTPS_PROXY
+ENV http_proxy RUN [ "sh", "-c", "echo", "$http_proxy" ]
+ENV https_proxy RUN [ "sh", "-c", "echo", "$HTTPS_PROXY" ]
+ENV HTTPS_PROXY RUN [ "sh", "-c", "echo", "$HTTPS_PROXY" ] 
+RUN echo 'proxy set to $http_proxy'
 
 MAINTAINER Raffaele P. Guidi <raffaele.p.guidi@gmail.com>
 
