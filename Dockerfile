@@ -1,4 +1,7 @@
 FROM ubuntu:14.04.1
+ENV http_proxy $http_proxy
+ENV https_proxy $HTTPS_PROXY
+ENV HTTPS_PROXY $HTTPS_PROXY
 
 MAINTAINER Raffaele P. Guidi <raffaele.p.guidi@gmail.com>
 
