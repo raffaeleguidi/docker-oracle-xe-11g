@@ -7,18 +7,18 @@ This **Dockerfile** is a [trusted build](https://registry.hub.docker.com/u/wname
 
 ### Installation
 ```
-docker pull wnameless/oracle-xe-11g
+docker pull raffaeleguidi/oracle-xe-11g
 ```
 
-Run with 22 and 1521 ports opened:
+Run with 22, 8080 and 1521 ports opened:
 ```
-docker run -d -p 49160:22 -p 49161:1521 wnameless/oracle-xe-11g
+docker run -d -p 40022:22 -p 41521:1521 -p 48080:8080 raffaeleguidi/oracle-xe-11g
 ```
 
 Connect database with following setting:
 ```
 hostname: localhost
-port: 49161
+port: 41521
 sid: xe
 username: system
 password: oracle
@@ -31,6 +31,6 @@ oracle
 
 Login by SSH
 ```
-ssh root@localhost -p 49160
+ssh root@localhost -p 40022
 password: admin
 ```
