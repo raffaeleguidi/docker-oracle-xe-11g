@@ -18,6 +18,8 @@ RUN echo 'root:admin' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 RUN echo "export VISIBLE=now" >> /etc/profile
+# No reverse DNS lookup to avoid long login pauses
+echo "UseDNS no" >> /etch/ssh/sshd_config
 
 # Prepare to install Oracle
 RUN apt-get install -y libaio1 net-tools bc
