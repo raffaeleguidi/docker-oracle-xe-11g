@@ -7,7 +7,7 @@ This **Dockerfile** is a [trusted build](https://registry.hub.docker.com/u/wname
 
 ### Installation
 ```
-docker pull raffaeleguidi/oracle-xe-11g
+docker pull raffaeleguidi/docker-oracle-xe-11g
 ```
 
 Run with 22, 8080 and 1521 ports opened:
